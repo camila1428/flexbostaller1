@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Columnas</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh; /* Hace que la página ocupe toda la pantalla */
+            display: flex;
+            flex-direction: column;
+        }
+
+        header, footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        main {
+            display: flex;
+            flex: 1; /* Ocupa todo el espacio disponible */
+        }
+
+        nav, aside {
+            background: #ccc;
+            padding: 20px;
+            flex: 1; /* Todas las columnas ocupan el mismo espacio inicialmente */
+        }
+
+        article {
+            background:pink;
+            padding: 20px;
+            flex: 2; /* El artículo ocupa el doble de espacio que las otras columnas */
+        }
+    </style>
+</head>
+<body>
+
+    <header>Bienvenido al Header</header>
+
+    <main>
+        <nav>Navegación</nav>
+        <article>
+            <h2>Título del post</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </article>
+        <aside>Columna derecha</aside>
+    </main>
+
+    <footer>Footer</footer>
+
+</body>
+</html>

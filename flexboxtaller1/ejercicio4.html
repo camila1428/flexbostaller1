@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4: Galería de imágenes adaptable</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #e06086;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        /* Contenedor principal de la galería */
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Galería con flexbox para organizar las imágenes */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        /* Cada elemento de la galería */
+        .gallery-item {
+            flex-grow: 1;
+            flex-basis: 300px; /* Tamaño base */
+            max-width: calc(33.333% - 15px); /* Máximo 3 por fila */
+            height: 200px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Asegurar que las imágenes cubran bien el espacio */
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        /* Adaptabilidad para tablets */
+        @media (max-width: 900px) {
+            .gallery-item {
+                max-width: calc(50% - 15px); /* 2 por fila */
+            }
+        }
+        
+        /* Adaptabilidad para móviles */
+        @media (max-width: 600px) {
+            .gallery-item {
+                max-width: 100%; /* 1 por fila */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicio 4: Galería de imágenes adaptable</h1>
+    
+    <div class="gallery-container">
+        <div class="gallery">
+            <!-- Utilizo placeholders como se muestra en el ejemplo -->
+            <div class="gallery-item">
+                <img src="./imagen (1).jpg"Imagen de ejemplo">
+            </div>
+            <div class="gallery-item">
+                <img src="./imagen (1).jpg" alt="Imagen de ejemplo">
+            </div>
+            <div class="gallery-item">
+                <img src="./imagen (1).jpg" alt="Imagen de ejemplo">
+            </div>
+            <div class="gallery-item">
+                <img src="./imagen (1).jpg" alt="Imagen de ejemplo">
+            </div>
+            <div class="gallery-item">
+                <img src="./imagen (1).jpg" alt="Imagen de ejemplo">
+            </div>
+            <div class="gallery-item">
+                <img src="./imagen (1).jpg" alt="Imagen de ejemplo">
+            </div>
+            <div class="gallery-item">
+                <img src="./imagen (1).jpg" alt="Imagen de ejemplo">
+            </div>
+            <div class="gallery-item">
+                <img src="./imagen (1).jpg" alt="Imagen de ejemplo">
+            </div>
+            <div class="gallery-item">
+                <img src="./imagen (1).jpg" alt="Imagen de ejemplo">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

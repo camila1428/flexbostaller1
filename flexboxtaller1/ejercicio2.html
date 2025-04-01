@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3: Centrar en página</title>
+    <style>
+        /* Resetear márgenes y asegurar que el html y body ocupen todo el espacio disponible */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Contenedor principal con flexbox para centrar el contenido */
+        .page-container {
+            /* Usar flexbox para centrar vertical y horizontalmente */
+            display: flex;
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center;     /* Centra verticalmente */
+            
+            /* Ocupar toda la altura de la ventana */
+            height: 100vh;
+            width: 100%;
+        }
+        
+        /* Estilo para el div centrado */
+        .centered-box {
+            background-color: #f5f5f5;
+            padding: 20px;
+            max-width: 450px;
+            text-align: center;
+            border-radius: 4px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        
+        .centered-box h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .centered-box p {
+            color: #666;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <div class="centered-box">
+            <h2>I'm Centered!</h2>
+            <p>This div is both vertically and horizontally centered. Even if the size in this box changes to make it wider or taller, the box will still be centered. Go ahead and edit this text!</p>
+        </div>
+    </div>
+</body>
+</html>
